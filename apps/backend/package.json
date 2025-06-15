@@ -11,7 +11,7 @@
     "start": "nest start",
     "dev": "nest start --watch",
     "generate-swagger-spec": "tsx scripts/generate-swagger.ts",
-    "generate-axios": "openapi-generator-cli generate -i ./swagger.json -g typescript-axios -o ../../packages/backend-api-client/src --additional-properties=usePromises=true,typescriptThreePlus=true",
+    "generate-axios": "openapi-generator-cli generate -i ./swagger.json -g typescript-axios -o ../../packages/backend-api-client/src",
     "post-axios-generate": "rimraf ./swagger.json",
     "typegen": "pnpm run generate-swagger-spec && pnpm run generate-axios && pnpm run post-axios-generate",
     "start:dev": "nest start --watch",
